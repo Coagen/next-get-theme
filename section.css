@@ -1,0 +1,203 @@
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+/* Background fixed to viewport */
+.background {
+  width: 100%;
+  height: 100vh; /* viewport height */
+  z-index: 0;
+}
+.bg-video {
+  filter: brightness(1); /* start bright */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Overlay scrolling normally */
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 300vh; /*taller than viewport*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  opacity: 0; /* start transparent */
+  z-index: 1;
+  pointer-events: none;
+  margin-bottom: 50vh;
+}
+/* HEADINGS */
+.hero-heading {
+  padding: 0px 50px;
+  width: 60%;
+  font-size: 9rem;
+  color: white;
+  transition: filter 0.1s, opacity 0.1s;
+  filter: blur(10px);
+  opacity: 0.3;
+  text-align: center;
+}
+
+.hero-sub-heading {
+  padding: 0px 50px;
+  width: 80%;
+  font-size: 7rem;
+  color: white;
+  transition: filter 0.1s, opacity 0.1s;
+  filter: blur(10px);
+  opacity: 0.3;
+  text-align: center;
+}
+
+.section-heading {
+  align-self: flex-end;
+  /* padding: 0px 50px; */
+  width: 60%;
+  font-size: 5rem;
+  color: white;
+  transition: filter 0.1s, opacity 0.1s;
+  filter: blur(10px);
+  opacity: 0.3;
+}
+.section-sub-heading {
+  padding: 0px 50px;
+  width: 70%;
+  font-size: 4rem;
+  color: white;
+  transition: filter 0.1s, opacity 0.1s;
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+@media (max-width: 970px) {
+  .hero-heading {
+    margin: 0 auto;
+  }
+  .section-heading {
+    padding: 0;
+    width: 80%;
+    font-size: 5rem;
+    text-align: center;
+  }
+  .explore {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore {
+    width: 70%;
+  }
+  .hero-heading {
+    font-size: 5rem;
+    margin: 0 auto;
+  }
+  .section-heading {
+    padding: 0;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .hero-sub-heading {
+    margin: 0 auto;
+    padding: 0px 0px;
+    width: 100%;
+    font-size: 6rem;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .explore {
+    width: 90%;
+  }
+  .hero-heading {
+    padding: 0px 0px;
+    width: 100%;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+  }
+}
+
+/*EXPLORE START  */
+.explore {
+  position: absolute;
+  left: 20px;
+  bottom: 80px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between span & button */
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.6); /* glass-like background */
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* blurred background */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.explore span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+
+.explore button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Light shine effect inside */
+.explore button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transition: transform 0.8s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover animation */
+.explore button:hover::before {
+  transform: translateX(50%);
+}
+
+.explore button:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.726);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/*EXPLORE ENDS  */

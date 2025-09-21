@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="section.css" />
+    <link rel="stylesheet" href="box.css" />
+    <title>GSAP</title>
+  </head>
+  <body>
+    <!-- NAV BAR OK -->
+    <nav id="navbar">
+      <div class="logo">MyLogo</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+    <!-- Fullscreen overlay menu -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="close-btn" id="closeOverlay">&times;</button>
+      <a href="#" class="overlay-link active">Home</a>
+      <a href="#" class="overlay-link">About</a>
+      <a href="#" class="overlay-link">Services</a>
+      <a href="#" class="overlay-link">Contact</a>
+    </div>
+    <!-- NAV BAR OK -->
+    <!--  -->
+    <!-- HERO SECTION OK -->
+    <section class="hero">
+      <div class="background" style="position: sticky; top: 0px">
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source
+            src="https://stream.mux.com/WAl7GG5G5q1fu7YpfhLJGqp7X98jbmiu/high.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="explore">
+          <span>Discover exciting content curated for you</span>
+          <button>Explore More</button>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <h1 class="hero-heading">IT Solution and Services</h1>
+        <h2 class="section-heading">Services we can help you with</h2>
+        <h1 class="hero-heading">IT Solution and Services</h1>
+      </div>
+    </section>
+    <!-- HERO SECTION OK -->
+    <!--  -->
+    <!-- SUB HERO SECTION -->
+    <section class="hero no-dark-video">
+      <div class="background" style="position: sticky; top: 30px">
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source
+            src="https://stream.mux.com/68UvGPYsjwSvyOjw69HQAH1JKxmcqlGK/high.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="explore">
+          <span>Discover exciting content curated for you</span>
+          <button>Explore More</button>
+        </div>
+      </div>
+      <div class="overlay">
+        <h1 class="hero-sub-heading">We do design, code & deploy.</h1>
+        <h2 class="section-heading">
+          Innovative IT Solutions for Your Business Success
+        </h2>
+      </div>
+    </section>
+    <!-- SUB HERO SECTION -->
+    <!--  -->
+    <!-- SERVICE SECTION -->
+    <section class="hero no-dark-video">
+      <div class="background" style="position: sticky; top: 30px">
+        <div class="gridContainer">
+          <div class="serviceCard"></div>
+          <div class="shrink-box">
+            <video class="bg-video" autoplay muted loop playsinline>
+              <source
+                src="https://stream.mux.com/Hj7XzvT68mUk0000zhSyGa6rSTBKcvZkDi/high.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+          <div class="serviceCard"></div>
+        </div>
+        <div class="explore">
+          <span>Discover exciting content curated for you</span>
+          <button>Explore More</button>
+        </div>
+      </div>
+      <div class="overlay" style="height: 150vh">
+        <h1 class="hero-sub-heading">We do design, code & deploy.</h1>
+      </div>
+    </section>
+    <!-- SERVICE SECTION -->
+    <!--  -->
+    <!-- HERO SECTION OK -->
+    <section class="hero">
+      <div class="background" style="position: sticky; top: 0px">
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source
+            src="https://stream.mux.com/WAl7GG5G5q1fu7YpfhLJGqp7X98jbmiu/high.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="explore">
+          <span>Discover exciting content curated for you</span>
+          <button>Explore More</button>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <h1 class="hero-heading">IT Solution and Services</h1>
+        <h2 class="section-heading">Services we can help you with</h2>
+        <h1 class="hero-heading">IT Solution and Services</h1>
+      </div>
+    </section>
+    <!-- HERO SECTION OK -->
+    <!--  -->
+    <button id="backToTop">↑</button>
+    <script src="navbar.js"></script>
+    <script src="section.js"></script>
+    <script src="box.js"></script>
+  </body>
+</html>
